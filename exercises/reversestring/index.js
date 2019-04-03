@@ -8,10 +8,17 @@
 
 
 function reverse(str){
-    return str.split('').reduce((reversed,character)=>{
-        return character + reversed;
-    },'');
+    let reversed = '';
+
+    for(let character of str){
+        reversed = character + reversed;
+        // debugger;
+    }
+    return reversed;
 }
+
+// reverse('asdf')
+
 
 module.exports = reverse;
 
@@ -33,4 +40,11 @@ module.exports = reverse;
 //         reversed = character + reversed;
 //     }
 //     return reversed;
+// }
+
+
+// function reverse(str){
+//     return str.split('').reduce((reversed,character)=>{
+//         return character + reversed;
+//     },'');
 // }
